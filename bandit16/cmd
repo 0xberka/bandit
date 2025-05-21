@@ -1,0 +1,14 @@
+
+password=kSkvUpMQ7lBYyCM4GBPvCvT1BfWRy0Dx
+
+for port in {31000..32000}; do
+	if timeout 1 bash -c "</dev/tcp/localhost/$port" 2> /dev/null; then
+		echo "Port $port is open"
+		response=$(timeout 5 openssl s_client -connect localhost:$port -quiet <<< "$password" 2> /dev/null)
+
+		if [[ "$response" == *"Correct!"* ]]; then
+			echo "$response"
+			break ;
+		fi
+	fi
+done

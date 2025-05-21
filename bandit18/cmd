@@ -1,0 +1,1 @@
+ssh bandit18@bandit.labs.overthewire.org -p 2220 'bash -c "cat ~/readme"'
