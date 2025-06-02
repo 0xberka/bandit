@@ -1,0 +1,1 @@
+echo '0qXahG8ZjOVMN9Ghs7iOWsCfZyXOUbYO' | nc -l -p 1337 & ./suconnect 1337

