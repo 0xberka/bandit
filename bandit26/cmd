@@ -1,0 +1,1 @@
+./bandit27-do cat /etc/bandit_pass/bandit27
