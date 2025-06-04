@@ -1,0 +1,9 @@
+
+cd $(mktemp -d)
+git clone ssh://bandit31-git@localhost:2220/home/bandit31-git/repo
+cd repo
+echo -n '' > .gitignore
+echo 'May I come in?' > key.txt
+git add key.txt
+git commit -m 'Add key.txt'
+git push origin master
